@@ -18,6 +18,11 @@ img_width = 256
 
 
 if __name__ == "__main__":
-    data = ""
+    data = "images"
     train_ds = image_dataset_from_directory(data,validation_split=0.2,subset="training",seed=123,image_size=(img_height, img_width),batch_size=batch_size)
+    validation_ds = image_dataset_from_directory(data,validation_split=0.2,subset="training",seed=123,image_size=(img_height, img_width),batch_size=batch_size)
     
+    print(train_ds.class_names)
+    
+    
+
