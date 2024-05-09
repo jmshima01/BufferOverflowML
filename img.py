@@ -1,9 +1,7 @@
 from PIL import Image
 from sys import argv
 import os
-
-files_missed = 0
-
+                                                                     
 def makeIMG(imgpath,dest):
     global files_missed
     
@@ -24,10 +22,8 @@ def makeIMG(imgpath,dest):
 
 if __name__ == "__main__":
     for f in os.scandir(argv[1]):
-        # print("Working on",f.path)
         for j in os.scandir(f.path):
             if j.name == "partial.o":
                 continue
             makeIMG(j.path,f"images/{f.name}")
-    # print(files_missed)
-        
+
