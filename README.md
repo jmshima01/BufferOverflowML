@@ -1,8 +1,5 @@
 # Buffer Overflow and Vulnerability Analysis Using CNN and Binary Visualization
-## (1) Name and CSM ID of the student.
-James Shima, 10865961
 
-## (2) What programming language is being used.
 `Python 3.10.12`
 
 `Jupyter Notebook (Python 3 ipykernal)`
@@ -31,6 +28,3 @@ Used `tensorflow` specifically for my `CNN`
 `weights.*` is a saved weight model for loading my model if prefered.
 
 More specific details are in the markdown of the report itself as well!
-
-#### Source Code
-Repository availible <a href="https://github.com/jmshima01/BufferoverflowML">here</a>
