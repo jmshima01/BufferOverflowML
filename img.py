@@ -13,7 +13,7 @@ def makeIMG(imgpath,dest):
                 data[i]= v
             except:
                 print("ind out of bounds,",imgpath,i,len(d))
-                files_missed+=1
+                # files_missed+=1
                 return
     image = Image.frombytes('L',(256,256), bytes(data), 'raw')
     sav = imgpath.split("/")[-1].split(".")[0]
@@ -22,8 +22,10 @@ def makeIMG(imgpath,dest):
 
 if __name__ == "__main__":
     for f in os.scandir(argv[1]):
+        
         for j in os.scandir(f.path):
             if j.name == "partial.o":
                 continue
+            print(f"creating image: images/{f.name}")
             makeIMG(j.path,f"images/{f.name}")
 
